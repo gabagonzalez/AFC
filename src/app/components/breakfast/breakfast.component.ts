@@ -2,17 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 // Service
-import { ProductService } from '../../../services/product.service';
+import { ProductService } from '../../services/product.service';
 
 // Product Class
-import { Product } from './../../../models/product';
+import { Product } from '../../models/product';
 
 @Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
+  selector: 'app-breakfast',
+  templateUrl: './breakfast.component.html',
+  styleUrls: ['./breakfast.component.css']
 })
-export class ProductComponent implements OnInit {
+export class BreakfastComponent implements OnInit {
 
   constructor(private productService: ProductService) { }
 
@@ -30,7 +30,7 @@ export class ProductComponent implements OnInit {
     
     this.resetForm(productForm);
   }
-  resetForm(productForm?: NgForm)
+    resetForm(productForm?: NgForm)
   {
     if(productForm != null)
       productForm.reset();

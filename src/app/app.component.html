@@ -1,11 +1,29 @@
-<nav class="navbar navbar-dark bg-dark">
-<img width="100" alt="Burger Logo" src="https://i.ibb.co/6Xt3x4K/BURGUER-QUEEN3-PNG.png">
-  <a href="/" class="navbar-brand">
-  Tour of Burger
-  </a>
-  
-</nav>
+<header>
+  <nav class="navbar navbar-dark bg-warning">
+    <div style="text-align:right">
+      <img style="float:left" width="70" alt="Burger Logo" src="https://i.ibb.co/6Xt3x4K/BURGUER-QUEEN3-PNG.png">
+      <a href="/products" class="navbar-brand">
+        <h1>Tour of Burger</h1>
+      </a>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-danger mt-3 m-2">
+        <a routerLink="/waiter" routerLinkActive="active">
+          <h5>Mesero</h5>
+        </a>
+      </button>
+      <button class="btn btn-danger mt-3 m-2">
+        <a routerLink="/kitchen" routerLinkActive="active">
+          <h5>Cocina</h5>
+        </a>
+      </button>
+      <button class="btn btn-danger mt-3 m-2">
+        <a routerLink="/home" routerLinkActive="active">
+          <h5>Home</h5>
+        </a>
+      </button>
+    </div>    
+  </nav>
+</header>
 
-<app-products></app-products>
-
-<!-- <router-outlet></router-outlet> -->
+<router-outlet></router-outlet>

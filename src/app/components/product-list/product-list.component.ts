@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 // Service
-import { ProductService } from '../../../services/product.service';
+import { ProductService } from '../../services/product.service';
 import { ToastrService } from 'ngx-toastr';
 
 // Class Product
-import { Product } from './../../../models/product';
+import { Product } from '../../models/product';
 
 @Component({
   selector: 'app-product-list',
@@ -26,7 +26,7 @@ export class ProductListComponent implements OnInit {
       .snapshotChanges()
       .subscribe(item => {
         this.productList = [];
-        item.forEach(element => {
+        item.map(element => {
           let x = element.payload.toJSON();
           x["$key"] = element.key;
           this.productList.push(x as Product);
