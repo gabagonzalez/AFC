@@ -1,5 +1,5 @@
 <!-- First Option -->
-<div class="container">
+<!-- <div class="container">
         <div class="row">
             <div class="col-md-12 text-center mt-4">
                 <h2> Ñam! Vamos a elegir...{{ title }}</h2>
@@ -23,4 +23,95 @@
                 </div>                
             </div>
         </div>
+    </div> -->
+<!-- Second Option -->
+<!-- <div class="container">
+    <div class="row">
+        <div class="card mt-5">
+            <div class="card-body">
+                <form>
+                    <h5 class="ml-2">INICIA TU PEDIDO</h5>
+                    
+                    <div class="form-group">
+                        <button class="btn btn-warning m-2" (click)="filterBreakfast('breakfast')">
+                            <i class="fas fa-check-circle"></i> DESAYUNO
+                        </button>
+                       
+                        <button class="btn btn-warning m-2" (click)="filterDailyMenu('dailyMenu')">
+                            <i class="fas fa-check-circle"></i> MENÚ DÍA
+                        </button>
+                        <button class="btn btn-warning m-2">
+                            <a href="/waiter" class="navbar-brand">
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </button>
+                    </div>  
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success mb-2 m-2" 
+                            *ngFor="let Food of FOOD">{{Food.name}}<br>{{Food.price}}
+                        </button>
+                        <ul>
+                            <li *ngFor="let Food of list"(click)="onSelect(list)">
+                                <span>{{Food.id}}</span> {{Food.name}} {{Food.price}}
+                            </li>
+                        </ul>
+                        <button type="submit" class="btn btn-success mb-2 m-2" 
+                            *ngFor="let Food of list" (click)="onSelect(Food)">
+                            {{Food.name}}<br>{{Food.price}}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-sm text-center mt-5">
+            <h2> Ñam! Vamos a elegir...</h2>
+            <img width="200" alt="Burger Logo" src="https://i.ibb.co/6Xt3x4K/BURGUER-QUEEN3-PNG.png">
+        </div>
+        <div class="card mt-5">
+            <div class="card-body">
+                <form>
+                    <h5 class="ml-2">RESUMEN</h5>
+                    <div class="form-group">
+                        <ul *ngFor="let product of productList">
+                            <li>{{product.cafe}}</li>
+                            <li>{{product.cafeleche}}</li>
+                            <li>{{product.jugo}}</li>
+                            <a class="btn btn-secondary text-while">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a class="btn btn-danger text-while">
+                                <i class="fas fa-trash-alt"></i>                            
+                            </a>
+                        </ul>
+                        <input>
+                    </div>
+                </form>
+                <p id="total">Total Pedido:$</p>
+                <div class="row">
+                    <button class="btn btn-warning mb-2 m-2" type="submit">
+                        <i class="fas fa-check-circle"></i> Enviar a Cocina
+                    </button>
+                    <button class="btn btn-danger mb-2 m-2" type="reset">
+                        <i class="fas fa-ban"></i> Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
+</div> -->
+<!-- Tercer Option -->
+<!-- Landing -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <app-product></app-product>
+        </div>
+        <div class="col-md-3 text-center mt-5">
+            <h2> Food </h2>
+            <img width="200" alt="Burger Logo" src="https://i.ibb.co/6Xt3x4K/BURGUER-QUEEN3-PNG.png">
+        </div>
+        <div class="col-md-5 text-center">
+            <!-- <app-product-list></app-product-list> -->
+        </div>
+    </div>
+</div>

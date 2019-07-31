@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
-
+import { Observable, of } from 'rxjs';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
-
+// class
 import { Product } from './../models/product';
+import { Food } from './../models/food-model';
+// Json-data
+import { FOOD } from './../models/food';
 
 @Injectable()
 export class ProductService {
-
+  
   productList: AngularFireList<any>;
   selectedProduct: Product = new Product();
 
@@ -15,6 +18,10 @@ export class ProductService {
   getProducts()
   {
     return this.productList = this.firebase.list('products');
+  }
+
+  getFood(): Observable<Food[]> {
+    return of(FOOD);
   }
 
   insertProduct(product: Product)
@@ -39,4 +46,5 @@ export class ProductService {
   {
     this.productList.remove($key);
   }
+  
 }

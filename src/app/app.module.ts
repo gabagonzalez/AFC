@@ -16,11 +16,10 @@ import {environment} from '../environments/environment';
 // components
 import { HomeComponent } from './components/home/home.component';
 import { WaiterComponent } from './components/waiter/waiter.component';
-import { BreakfastComponent } from './components/breakfast/breakfast.component';
 import { KitchenComponent } from './components/kitchen/kitchen.component';
-import { MenuComponent } from './components/menu/menu.component';
-import { ProductListComponent } from './components/product-list/product-list.component';
-import { ProductComponent } from './components/product/product.component';
+import { ProductListComponent } from './components/kitchen/product-list/product-list.component';
+import { ProductComponent } from './components/waiter/product/product.component';
+
 
 // routes
 import { appRoutes } from './app.routes';
@@ -36,9 +35,7 @@ import {ProductService} from './services/product.service';
     AppComponent,
     HomeComponent,
     WaiterComponent,
-    BreakfastComponent,
     KitchenComponent,
-    MenuComponent,
     ProductListComponent,
     ProductComponent
   ],

@@ -1,10 +1,63 @@
-<!-- Un por mientras -->
-<div class="col-md-12 text-center mt-5">
-        <button class="btn btn-success" style="margin-left: 10px">
-            <a routerLink="/home" routerLinkActive="active">
-                <i class="fas fa-arrow-left"></i><h5>Regresar</h5>
-            </a>
-        </button>
-        <h2>Menú en construcción...</h2>
-        <img width="800" alt="Cat status" src="https://i.kym-cdn.com/photos/images/original/000/236/738/016.jpg">
+<!-- Tercer Option -->
+<div class="container">
+        <div class="row">
+            <div class="card mt-5">
+                <div class="card-body">
+                    <form>
+                        <h5 class="ml-2"> INICIA TU PEDIDO</h5>
+                        <!-- <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="productService.selectedProduct.$key"> -->
+                        <div class="form-group">
+                            <button class="btn btn-warning" (click)="filterDailyMenu('dailyMenu')">
+                                <i class="fas fa-check-circle"></i> Ver Productos
+                            </button>
+                            <button class="btn btn-danger mb-2 m-2" type="reset">
+                                <a routerLink="/waiter" routerLinkActive="active">
+                                    <i class="fas fa-ban"></i> Regresar
+                                </a>                       
+                            </button>
+                        </div>  
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success mb-2 m-2" 
+                                *ngFor="let Food of list" (click)="onSelect(list)">
+                                {{Food.name}}<br>{{Food.price}}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm text-center mt-5">
+                <h2> Ñam! Que Comer el resto del día??...{{ title }}</h2>
+                <img width="200" alt="Burger Logo" src="https://i.ibb.co/6Xt3x4K/BURGUER-QUEEN3-PNG.png">
+            </div>
+            <div class="card mt-5">
+                <div class="card-body">
+                    <form>
+                        <h5 class="ml-2">RESUMEN</h5>
+                        <div class="form-group">
+                            <ul *ngFor="let product of productList">
+                                <li>{{product.cafe}}</li>
+                                <li>{{product.cafeleche}}</li>
+                                <li>{{product.jugo}}</li>
+                                <a class="btn btn-secondary text-while">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a class="btn btn-danger text-while">
+                                    <i class="fas fa-trash-alt"></i>                            
+                                </a>
+                            </ul>
+                            <input>
+                        </div>
+                    </form>
+                    <p id="total">Total Pedido:$</p>
+                    <div class="row">
+                        <button class="btn btn-warning mb-2 m-2" type="submit">
+                            <i class="fas fa-check-circle"></i> Enviar a Cocina
+                        </button>
+                        <button class="btn btn-danger mb-2 m-2" type="reset">
+                            <i class="fas fa-ban"></i> Cancelar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
