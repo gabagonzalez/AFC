@@ -18,14 +18,14 @@ import { HomeComponent } from './components/home/home.component';
 import { WaiterComponent } from './components/waiter/waiter.component';
 import { KitchenComponent } from './components/kitchen/kitchen.component';
 import { ProductListComponent } from './components/kitchen/product-list/product-list.component';
-import { ProductComponent } from './components/waiter/product/product.component';
+import { ProductComponent } from './components/kitchen/product/product.component';
 
 
 // routes
 import { appRoutes } from './app.routes';
 // services
 import {ProductService} from './services/product.service';
-
+import {OtherService} from './services/other.service';
 
 
 
@@ -53,7 +53,8 @@ import {ProductService} from './services/product.service';
     )
   ],
   providers: [
-    ProductService
+    ProductService,
+    OtherService
   ],
   bootstrap: [AppComponent]
 })

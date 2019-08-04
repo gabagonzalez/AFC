@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+// firebase
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 // class
 import { Product } from './../models/product';
